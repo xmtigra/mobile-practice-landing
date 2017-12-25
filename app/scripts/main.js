@@ -39,6 +39,7 @@ function navbar(active) {
   if (active.hasClass('header__a')) {
     active.closest('li').addClass('header__li_active').siblings('li').removeClass('header__li_active');
     active.closest('body').removeClass('header__btn_active');
+    active.closest('body').find('.header__btn').toggleClass("header__btn_active");
   }
 }
 
