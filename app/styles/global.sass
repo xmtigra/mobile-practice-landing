@@ -2,8 +2,6 @@
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
 
-
-
 body 
   color: #373A36
   background: #fff
@@ -12,12 +10,11 @@ body
   &.header__btn_active
     overflow: hidden
 
-
 .flex
   display: flex
   &_center
-    justify-content: center
     align-items: center
+    justify-content: center
   &_v-center
     align-items: center
   &_h-center
@@ -25,3 +22,18 @@ body
   &_between
     justify-content: space-between
   
+.logo
+  width: 32px
+  height: 32px 
+  font-size: 0
+  display: inline-block
+  vertical-align: middle
+  background: url('../images/png/logo_mobile_pactice_simple.png') center no-repeat
+  background-size: contain
+  &:link:hover
+    cursor: pointer
+    opacity: 0.8
+  @media (min-width: 1200px)
+    width: 49px
+    height: 49px
+    

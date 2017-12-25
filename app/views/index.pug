@@ -113,9 +113,16 @@ html(lang='en')
               a(href="http://") Français
             dt 
               a(href="http://") English
-      footer 
+      footer.footer
         .container
-          p footer
+          .footer__box
+            .social.footer__social
+              a.social__item.social__item_in(href="#")
+              a.social__item.social__item_tw(href="#")
+              a.social__item.social__item_fb(href="#")
+            .footer__flex
+              a.logo.footer__logo(href="http://") logo
+              p.footer__text © 2017 Mobile Practice. All rights reserved.
     // build:js scripts/vendor.js
     // bower:js
     script(src='/bower_components/jquery/dist/jquery.js')
