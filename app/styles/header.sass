@@ -6,8 +6,8 @@
   line-height: 30px
   height: 70px
   transition: all 0.3s linear
-  &_fixed 
-    background-image: linear-gradient(0deg, #FA384D 0%, #FA513C 100%)
+  &_fixed, .header__btn_active &
+    background-image: linear-gradient(-107deg, #FA384D 0%, #FA513C 100%)
     box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.15)
   &__logo 
     padding-left: 13px
@@ -41,8 +41,51 @@
     margin-right: 11px
     &:hover 
       cursor: pointer
+    &_active
+      background: url('../images/svg/menu_active.svg') center no-repeat
   &__nav
     display: none
+  @media (min-width: 320px) and (max-width: 991px) 
+    &__nav
+      background-image: linear-gradient(-107deg, #FA384D 0%, #FA513C 100%)
+      display: none
+      height: 100vh
+      position: fixed
+      left: 0 
+      right: 0 
+      top: 68px
+      margin: auto
+      padding: 23px 0 0 0
+      .header__btn_active & 
+        display: block
+    &__li
+      text-align: center
+      display: block
+      padding: 0
+      list-style-type: none
+      width: 100%
+      margin: 0 auto
+      padding: 0 25px
+      opacity: 0.71
+      &_active, &:hover 
+        opacity: 1
+    &__a 
+      border-bottom: 1px solid rgba(#FFFFFF, 0.48)
+      display: block
+      font-weight: 900
+      text-transform: uppercase
+      text-align: center
+      line-height: 1.4
+      padding: 11px 0
+      margin: 0
+      color: #fff 
+      text-decoration: none
+  @media (min-width: 320px) and (max-width: 767px)
+    &__li
+      max-width: 540px
+  @media (min-width: 768px) and (max-width: 991px)
+    &__li
+      max-width: 720px
   @media (min-width: 768px)
     height: 90px
     padding: 21px 0
@@ -89,10 +132,13 @@
       text-transform: uppercase
       padding: 17px
       line-height: 1
+      opacity: 0.71
       &:first-of-type
         padding-left: 0
       &:last-of-type
         padding-right: 0
+      &_active, &:hover 
+        opacity: 1
     &__a 
       color: #fff 
       text-decoration: none
