@@ -4,13 +4,7 @@ $(document).ready(() => {
 });
 
 $(window).on("load resize scroll", function (e) {
-  var sticky = $(".header"),
-    scroll = $(window).scrollTop();
-  if (scroll >= 1) {
-    sticky.addClass("header_fixed");
-  } else {
-    sticky.removeClass("header_fixed");
-  }
+  headerSticky();
 });
 
 
@@ -45,5 +39,15 @@ function navbar(active) {
   if (active.hasClass('header__a')) {
     active.closest('li').addClass('header__li_active').siblings('li').removeClass('header__li_active');
     active.closest('body').removeClass('header__btn_active');
+  }
+}
+
+function headerSticky() {
+  var sticky = $(".header"),
+    scroll = $(window).scrollTop();
+  if (scroll >= 1) {
+    sticky.addClass("header_fixed");
+  } else {
+    sticky.removeClass("header_fixed");
   }
 }
