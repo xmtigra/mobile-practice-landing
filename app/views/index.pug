@@ -49,7 +49,6 @@ html(lang='en')
                   a(href="#section-5").header__a About us
                 li.header__li 
                   a(href="#section-6").header__a Contacts
-
       section#section-1.section-1
         .container
           .section-1__box
@@ -73,7 +72,6 @@ html(lang='en')
               figure.section-2__figure 
                 img.section-2__img(src='/images/svg/providing.svg', alt="providing")
               .section-2__text By providing more opportunities for more people  to practice, share & coach each other for personal & team performance.
-
       section#section-3.section-3
         .container
           h2 How it works?
@@ -96,23 +94,23 @@ html(lang='en')
               img.section-7__img(src="/images/png/app-store.png", alt="app store")
             a.section-7__item(href="#")
               img.section-7__img(src="/images/png/google-play.png", alt="google play")
-
       div#section-8.section-8
         .container
-          dl 
-            dt 
-              a(href="http://") try demo
-            dt
-              a(href="http://") Privacy policy
-            dt 
-              a(href="http://") Help center
-            dt 
-              a(href="http://") Contact us
-          dl 
-            dt 
-              a(href="http://") Français
-            dt 
-              a(href="http://") English
+          .section-8__list
+            a.btn.btn_color_red.section-8__btn(href="http://") book a demo
+            .section-8__box
+              ul.section-8__ul
+                li.section-8__li
+                  a.section-8__a(href="http://") Privacy policy
+                li.section-8__li
+                  a.section-8__a(href="http://") Help center
+                li.section-8__li
+                  a.section-8__a(href="http://") Contact us
+              ul.section-8__ul.section-8__ul_size_l
+                li.section-8__li 
+                  a.section-8__a(href="http://") Français
+                li.section-8__li.section-8__li_active
+                  a.section-8__a(href="http://") English
       footer.footer
         .container
           .footer__box
