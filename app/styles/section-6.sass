@@ -1,8 +1,12 @@
 .section-6
-  background-image: linear-gradient(-135deg, #FA384D 0%, #FA513C 100%)
   text-align: center
-  padding: 46px 0
-  margin-top: 300px
+  width: 100%
+  overflow: hidden
+  &__red-box
+    padding: 46px 0
+    position: relative
+    z-index: 2
+    background-image: linear-gradient(-135deg, #FA384D 0%, #FA513C 100%)
   &__title
     color: #fff
     margin-bottom: 13px
@@ -19,14 +23,15 @@
   &__submit
     position: static
   &__center-figure
-    position: absolute
-    left: 0 
-    right: 0 
     margin: 0 auto
-    transform: translate(-44px, -287px)
-    transition: transform 0.3s
+    transition: all 0.3s
     z-index: -1
+    position: relative
+    top: 105px
+    left: -44px
     width: 410px
+    right: 0 
+    margin: auto
     img 
       width: 100%
       height: auto 
@@ -34,18 +39,19 @@
       min-width: initial
   @media (min-width: 340px)
     &__center-figure  
-      transform: translate(-34px, -287px)
+      left: -34px
   @media (min-width: 360px)
     &__center-figure  
-      transform: translate(-24px, -287px)
+      left: -24px
   @media (min-width: 380px)
     &__center-figure  
-      transform: translate(-14px, -287px)
+      left: -14px
   @media (min-width: 420px)
     &__center-figure  
-      transform: translate(0, -287px)
+      left: 0
   @media (min-width: 768px)
-    padding: 60px 0 61px
+    &__red-box
+      padding: 60px 0 61px
     &__title
       margin-bottom: 5px
     &__text
@@ -62,9 +68,10 @@
       margin-left: 7px
     &__center-figure
       width: 742px
-      transform: translate(0px, -343px)
+      top: 340px
   @media (min-width: 992px)
-    padding: 60px 0 77px
+    &__red-box
+      padding: 60px 0 77px
     &__input
       width: 551px
       min-width: 551px
@@ -75,10 +82,10 @@
     &__text 
       margin-bottom: 40px
     &__center-figure
-      transform: translate(0px, -338px)
+      top: 346px
   @media (min-width: 1200px)
-    padding: 68px 0 97px
-    margin-top: 450px
+    &__red-box
+      padding: 68px 0 97px
     &__text 
       font-size: 23px
       margin-bottom: 73px
@@ -93,4 +100,5 @@
       margin-left: 10px
     &__center-figure
       width: 768px
-      transform: translate(-12px, -471px)
+      top: 244px
+      left: -13px
