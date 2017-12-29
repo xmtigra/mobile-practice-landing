@@ -3,7 +3,7 @@ $(document).ready(() => {
   $('.header__btn').click(clickHeaderBtn);
 });
 
-$(window).on('load resize scroll', function() {
+$(window).on('load resize scroll', function () {
   headerSticky();
 });
 
@@ -15,15 +15,16 @@ function clickHeaderBtn() {
 
 function clickA(event) {
   const link = event.currentTarget.getAttribute('href');
-  if(link.length > 1 && link.indexOf('#') === 0) {
+  if (link.length > 1 && link.indexOf('#') === 0) {
     event.preventDefault();
+    event.stopPropagation();
 
     navbar($(this));
 
     const section = document.querySelector(link);
-    if(section) {
+    if (section) {
       let top = 70;
-      if($(section).closest('body').width() > 767) {
+      if ($(section).closest('body').width() > 767) {
         top = 90;
       }
       $('html, body').animate({
@@ -36,7 +37,7 @@ function clickA(event) {
 }
 
 function navbar(active) {
-  if(active.hasClass('header__a')) {
+  if (active.hasClass('header__a')) {
     active.closest('li').addClass('header__li_active').siblings('li').removeClass('header__li_active');
     active.closest('body').removeClass('header__btn_active');
     active.closest('body').find('.header__btn').toggleClass('header__btn_active');
@@ -46,7 +47,7 @@ function navbar(active) {
 function headerSticky() {
   const sticky = $('.header');
   const scroll = $(window).scrollTop();
-  if(scroll >= 1) {
+  if (scroll >= 1) {
     sticky.addClass('header_fixed');
   } else {
     sticky.removeClass('header_fixed');
